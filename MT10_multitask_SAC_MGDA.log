@@ -1,0 +1,185 @@
+nohup: ignoring input
+{'reach-v1': <class 'metaworld.envs.mujoco.sawyer_xyz.sawyer_reach_push_pick_place.SawyerReachPushPickPlaceEnv'>, 'push-v1': <class 'metaworld.envs.mujoco.sawyer_xyz.sawyer_reach_push_pick_place.SawyerReachPushPickPlaceEnv'>, 'pick-place-v1': <class 'metaworld.envs.mujoco.sawyer_xyz.sawyer_reach_push_pick_place.SawyerReachPushPickPlaceEnv'>, 'door-v1': <class 'metaworld.envs.mujoco.sawyer_xyz.sawyer_door.SawyerDoorEnv'>, 'drawer-open-v1': <class 'metaworld.envs.mujoco.sawyer_xyz.sawyer_drawer_open.SawyerDrawerOpenEnv'>, 'drawer-close-v1': <class 'metaworld.envs.mujoco.sawyer_xyz.sawyer_drawer_close.SawyerDrawerCloseEnv'>, 'button-press-topdown-v1': <class 'metaworld.envs.mujoco.sawyer_xyz.sawyer_button_press_topdown.SawyerButtonPressTopdownEnv'>, 'ped-insert-side-v1': <class 'metaworld.envs.mujoco.sawyer_xyz.sawyer_peg_insertion_side.SawyerPegInsertionSideEnv'>, 'window-open-v1': <class 'metaworld.envs.mujoco.sawyer_xyz.sawyer_window_open.SawyerWindowOpenEnv'>, 'window-close-v1': <class 'metaworld.envs.mujoco.sawyer_xyz.sawyer_window_close.SawyerWindowCloseEnv'>}
+2022-04-19 12:19:39,650 MainThread INFO: Experiment Name:MT10_Conditioned_Modular_Shallow
+2022-04-19 12:19:39,651 MainThread INFO: {
+  "env_name": "mt10",
+  "env": {
+    "reward_scale": 1,
+    "obs_norm": false
+  },
+  "meta_env": {
+    "obs_type": "with_goal_and_id"
+  },
+  "replay_buffer": {
+    "size": 1000000.0
+  },
+  "net": {
+    "hidden_shapes": [
+      400,
+      400,
+      400
+    ],
+    "append_hidden_shapes": []
+  },
+  "general_setting": {
+    "discount": 0.99,
+    "pretrain_epochs": 20,
+    "num_epochs": 7500,
+    "epoch_frames": 200,
+    "max_episode_frames": 200,
+    "batch_size": 1280,
+    "min_pool": 10000,
+    "target_hard_update_period": 1000,
+    "use_soft_update": true,
+    "tau": 0.005,
+    "opt_times": 200,
+    "eval_episodes": 3
+  },
+  "sac": {
+    "plr": 0.0003,
+    "qlr": 0.0003,
+    "reparameterization": true,
+    "automatic_entropy_tuning": true,
+    "policy_std_reg_weight": 0,
+    "policy_mean_reg_weight": 0
+  }
+}
+Box(4,)
+Box(19,)
+/home/pgao/anaconda3/envs/multitask_rl/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Could not seed environment <MTEnv instance>[0m
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+2022-04-19 12:21:09,612 MainThread INFO: EPOCH:0
+2022-04-19 12:21:09,616 MainThread INFO: Time Consumed:58.955387353897095s
+2022-04-19 12:21:09,616 MainThread INFO: Total Frames:2000s
+--------------------------------  ----------  ---  ---  ---
+Name                              Value
+Train_Epoch_Reward                4772.29899
+Running_Training_Average_Rewards  141.59465
+
+Name                              Mean        Std  Max  Min
+--------------------------------  ----------  ---  ---  ---
+2022-04-19 12:22:10,099 MainThread INFO: EPOCH:1
+2022-04-19 12:22:10,100 MainThread INFO: Time Consumed:60.473896741867065s
+2022-04-19 12:22:10,100 MainThread INFO: Total Frames:4000s
+--------------------------------  -----------  ---  ---  ---
+Name                              Value
+Train_Epoch_Reward                13304.77129
+Running_Training_Average_Rewards  839.06817
+
+Name                              Mean         Std  Max  Min
+--------------------------------  -----------  ---  ---  ---
+2022-04-19 12:23:18,536 MainThread INFO: EPOCH:2
+2022-04-19 12:23:18,537 MainThread INFO: Time Consumed:68.43563985824585s
+2022-04-19 12:23:18,537 MainThread INFO: Total Frames:6000s
+--------------------------------  -----------  ---  ---  ---
+Name                              Value
+Train_Epoch_Reward                39621.92078
+Running_Training_Average_Rewards  1876.10148
+
+Name                              Mean         Std  Max  Min
+--------------------------------  -----------  ---  ---  ---
+2022-04-19 12:24:25,324 MainThread INFO: EPOCH:3
+2022-04-19 12:24:25,328 MainThread INFO: Time Consumed:66.78653860092163s
+2022-04-19 12:24:25,328 MainThread INFO: Total Frames:8000s
+--------------------------------  -----------  ---  ---  ---
+Name                              Value
+Train_Epoch_Reward                13448.42307
+Running_Training_Average_Rewards  1704.49170
+
+Name                              Mean         Std  Max  Min
+--------------------------------  -----------  ---  ---  ---
+2022-04-19 12:25:17,992 MainThread INFO: EPOCH:4
+2022-04-19 12:25:17,992 MainThread INFO: Time Consumed:52.66323494911194s
+2022-04-19 12:25:17,993 MainThread INFO: Total Frames:10000s
+--------------------------------  ----------  ---  ---  ---
+Name                              Value
+Train_Epoch_Reward                9655.90140
+Running_Training_Average_Rewards  1956.44331
+
+Name                              Mean        Std  Max  Min
+--------------------------------  ----------  ---  ---  ---
+2022-04-19 12:25:58,900 MainThread INFO: EPOCH:5
+2022-04-19 12:25:58,901 MainThread INFO: Time Consumed:40.90674948692322s
+2022-04-19 12:25:58,901 MainThread INFO: Total Frames:12000s
+--------------------------------  ----------  ---  ---  ---
+Name                              Value
+Train_Epoch_Reward                8144.08947
+Running_Training_Average_Rewards  701.04302
+
+Name                              Mean        Std  Max  Min
+--------------------------------  ----------  ---  ---  ---
+2022-04-19 12:26:39,821 MainThread INFO: EPOCH:6
+2022-04-19 12:26:39,822 MainThread INFO: Time Consumed:40.919487953186035s
+2022-04-19 12:26:39,822 MainThread INFO: Total Frames:14000s
+--------------------------------  -----------  ---  ---  ---
+Name                              Value
+Train_Epoch_Reward                31121.05834
+Running_Training_Average_Rewards  1349.34723
+
+Name                              Mean         Std  Max  Min
+--------------------------------  -----------  ---  ---  ---
+2022-04-19 12:27:20,094 MainThread INFO: EPOCH:7
+2022-04-19 12:27:20,094 MainThread INFO: Time Consumed:40.27146863937378s
+2022-04-19 12:27:20,095 MainThread INFO: Total Frames:16000s
+--------------------------------  -----------  ---  ---  ---
+Name                              Value
+Train_Epoch_Reward                10714.26205
+Running_Training_Average_Rewards  1307.93283
+
+Name                              Mean         Std  Max  Min
+--------------------------------  -----------  ---  ---  ---
+2022-04-19 12:27:50,756 MainThread INFO: EPOCH:8
+2022-04-19 12:27:50,756 MainThread INFO: Time Consumed:30.65999674797058s
+2022-04-19 12:27:50,756 MainThread INFO: Total Frames:18000s
+--------------------------------  -----------  ---  ---  ---
+Name                              Value
+Train_Epoch_Reward                12717.86238
+Running_Training_Average_Rewards  928.24497
+
+Name                              Mean         Std  Max  Min
+--------------------------------  -----------  ---  ---  ---
+2022-04-19 12:28:28,271 MainThread INFO: EPOCH:9
+2022-04-19 12:28:28,271 MainThread INFO: Time Consumed:37.51370811462402s
+2022-04-19 12:28:28,271 MainThread INFO: Total Frames:20000s
+--------------------------------  -----------  ---  ---  ---
+Name                              Value
+Train_Epoch_Reward                18758.41915
+Running_Training_Average_Rewards  1074.07564
+
+Name                              Mean         Std  Max  Min
+--------------------------------  -----------  ---  ---  ---
+2022-04-19 12:29:06,132 MainThread INFO: EPOCH:10
+2022-04-19 12:29:06,132 MainThread INFO: Time Consumed:37.85993218421936s
+2022-04-19 12:29:06,132 MainThread INFO: Total Frames:22000s
+--------------------------------  ----------  ---  ---  ---
+Name                              Value
+Train_Epoch_Reward                9625.49940
+Running_Training_Average_Rewards  703.65060
+
+Name                              Mean        Std  Max  Min
+--------------------------------  ----------  ---  ---  ---
+2022-04-19 12:29:44,882 MainThread INFO: EPOCH:11
+2022-04-19 12:29:44,882 MainThread INFO: Time Consumed:38.748228311538696s
+2022-04-19 12:29:44,882 MainThread INFO: Total Frames:24000s
+--------------------------------  -----------  ---  ---  ---
+Name                              Value
+Train_Epoch_Reward                11724.82234
+Running_Training_Average_Rewards  763.87724
+
+Name                              Mean         Std  Max  Min
+--------------------------------  -----------  ---  ---  ---
+2022-04-19 12:30:23,237 MainThread INFO: EPOCH:12
+2022-04-19 12:30:23,237 MainThread INFO: Time Consumed:38.35370850563049s
+2022-04-19 12:30:23,237 MainThread INFO: Total Frames:26000s
+--------------------------------  -----------  ---  ---  ---
+Name                              Value
+Train_Epoch_Reward                15222.07775
+Running_Training_Average_Rewards  1090.89652
+
+Name                              Mean         Std  Max  Min
+--------------------------------  -----------  ---  ---  ---
+2022-04-19 12:30:56,675 MainThread INFO: EPOCH:13
+2022-04-19 12:30:56,676 MainThread INFO: Time Consumed:33.43723130226135s
+2022-04-19 12:30:56,676 MainThread INFO: Total Frames:28000s
+/home/pgao/anaconda3/envs/multitask_rl/lib/python3.7/multiprocessing/semaphore_tracker.py:144: UserWarning: semaphore_tracker: There appear to be 8 leaked semaphores to clean up at shutdown
+  len(cache))
