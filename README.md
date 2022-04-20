@@ -1,18 +1,18 @@
 # Multi-Task Learning as Multi-Objective Optimization
 
-This code repository includes the source code for the [Paper](https://arxiv.org/abs/1810.04650):
+#This code repository includes the source code for the [Paper](https://arxiv.org/abs/1810.04650):
 
 ```
-Multi-Task Learning as Multi-Objective Optimization
-Ozan Sener, Vladlen Koltun
-Neural Information Processing Systems (NeurIPS) 2018 
+Multi-Task Reinforcement Learning with Multi-Objective Optimization
+Bowei He
 ```
 
-The experimentation framework is based on PyTorch; however, the proposed algorithm (MGDA_UB) is implemented largely Numpy with no other requirement. So, it should be trivial to extend to other deep learning frameworks. PyTorch version is implemented in `min_norm_solvers.py`, generic version using only Numpy is implemented in file `min_norm_solvers_numpy.py`.
+The experimentation framework is based on PyTorch; 
+PyTorch version Frank_Wolfe_Solver and gradient descent method are implemented in `min_norm_solvers.py`, generic version using only Numpy is implemented in file `min_norm_solvers_numpy.py`.
 
-This repo includes more than the implementation of the paper. It imlpements both Frank-Wolfe and projected gradient descent method. It also has smart initialization and gradient normalization tricks which are described with inline comments.
+ It also has smart initialization and gradient normalization tricks which are described with inline comments.
 
-The source code and dataset (MultiMNIST) are released under the MIT License. See the License file for details.
+The source code and MetaWorld environment are released under the MIT License. See the License file for details.
 
 
 # Requirements and References
@@ -29,25 +29,16 @@ We adapt and use some code snippets from:
 # Usage
 The code base uses `configs.json` for the global configurations like dataset directories, etc.. Experiment specific parameters are provided seperately as a json file. See the `sample.json` for an example.
 
-To train a model, use the command: 
+To train MT-SAC, use the command: 
 ```bash
-python multi_task/train_multi_task.py --param_file=./sample.json
+python  train_multi_task.py --config meta_config/mt10/mtsac.json --id MT10_MTSAC --method 'multitask_SAC'  --seed 1 --worker_nums 10 --eval_worker_nums 10
+
 ```
 
 # Contact
-For any question, you can contact ozan.sener@intel.com
+To Train PO-MT-SAC, use the command:
+
+
+For any question, you can contact bokwaiho200010@gmail.com
 
 # Citation
-If you use this codebase or any part of it for a publication, please cite:
-```
-@incollection{NeurIPS2018_Sener_Koltun,
-title = {Multi-Task Learning as Multi-Objective Optimization},
-author = {Sener, Ozan and Koltun, Vladlen},
-booktitle = {Advances in Neural Information Processing Systems 31},
-editor = {S. Bengio and H. Wallach and H. Larochelle and K. Grauman and N. Cesa-Bianchi and R. Garnett},
-pages = {525--536},
-year = {2018},
-publisher = {Curran Associates, Inc.},
-url = {http://papers.nips.cc/paper/7334-multi-task-learning-as-multi-objective-optimization.pdf}
-}
-```
