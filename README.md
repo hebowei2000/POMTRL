@@ -1,5 +1,4 @@
-# Multi-Task Learning as Multi-Objective Optimization
-
+Multi-Task Reinforcment Learning with Multi-Objective Optimization
 #
 
 ```
@@ -25,7 +24,7 @@ The code is only tested in ``Python 3`` using ``Anaconda`` environment.
 
 
 # Usage
-The code base uses `configs.json` for the global configurations like dataset directories, etc.. Experiment specific parameters are provided seperately as a json file. See the `sample.json` for an example.
+
 
 To train MT-SAC and PO-MT-SAC, use the command: 
 ```bash
