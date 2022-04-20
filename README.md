@@ -1,4 +1,4 @@
-#Multi-Task Reinforcment Learning with Multi-Objective Optimization
+**Multi-Task Reinforcment Learning with Multi-Objective Optimization**
 #
 
 ```
@@ -11,7 +11,7 @@ PyTorch version Frank_Wolfe_Solver and gradient descent method are implemented i
 
  It also has smart initialization and gradient normalization tricks which are described with inline comments.
 
-The experiment configurations are defined in the filefolder meta_config.
+The experiment configurations are defined in the filefolder `meta_config`.
 The source code and MetaWorld environment are released under the MIT License. See the License file for details.
 
 
